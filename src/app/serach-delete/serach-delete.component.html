@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div id="custom-search-input">
+            <div class="input-group col-md-12" style="text-align: center">
+                <input type="text" class="search-query form-control" placeholder="Search With id"  name="id" [(ngModel)]="id"/>
+                    <span class="input-group-btn">
+                        <button class="btn btn-danger" type="button" (click)="findUserByEmailId()">
+                            <span class=" glyphicon glyphicon-search">bhu</span>
+                        </button>
+                    </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+<div class="container">
+    <div class="row col-md-6 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.course}}</td>
+            <td class="text-center">
+                <button class="btn btn-danger btn-xs" (click)="delteUser(user.id)">Delete</button>
+            </td>
+          </tr>
+    </tbody>
+    </table>
+    </div>
+</div>
+
+
+
